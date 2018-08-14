@@ -37,7 +37,7 @@ def calhelp():
     \n\n特殊：x！阶乘、x&y求余，\
     \n\n常数：圆周率 pi 、自然常数 e\
     \n\n特别说明：1.本计算器采用角度制而非弧度值\
-    \n\n         2.输入close可关闭帮助内容\n' 
+    \n\n          2.输入close可关闭帮助内容\n' 
 
 #定义calclose函数关闭帮助内容
 def calclose():
