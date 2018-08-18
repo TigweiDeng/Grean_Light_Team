@@ -3,16 +3,23 @@
 
 from tkinter import *
 from math import  *
-from SetParameter import *
+from Const import *
+from SetSelectButton import *
+from ShowButton import *
 
 root=Tk()
-root.minsize(600,300)
 root.title('Area Calculator')
+root.minsize(interfaceWidth,interfaceHeight)
 
-PI=3.1415926
-GraphicParameterName=[['length',''],['length','width'],['base','height'],['radius','']]
-GraphicParameter=[[0,1,1,1],[0,0,1,1],[0,0,0.5,1],[0,1,PI,1]]
+SelectButtonClass = setSelectButton()
 
-SetParameterLabel()
+for i in range(0, buttonTypeNumber):
+    buttonNumber = len(buttonName[i])
+
+    for j in range(0, buttonNumber):
+        showButton(root, SelectButtonClass[i][j])
+
+
+
 
 root.mainloop()

@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{b4d1a2ac-7f08-4a52-a021-f8bd341d90af}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>areaCalculate.py</StartupFile>
+    <StartupFile>Const.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -21,12 +21,21 @@
   <ItemGroup>
     <Compile Include="areaCalculate.py" />
     <Compile Include="AreaCalculator.py" />
-    <Compile Include="ButtonClassesAndOperation.py" />
+    <Compile Include="ButtonClass.py" />
     <Compile Include="ButtonDo.py" />
     <Compile Include="Calculator.py" />
+    <Compile Include="class1.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="GetResult.py" />
+    <Compile Include="Const.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ShowButton.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="result.py" />
-    <Compile Include="SetButtonClass.py" />
+    <Compile Include="SetSelectButton.py" />
     <Compile Include="SetParameter.py" />
     <Compile Include="TypeIndexGet.py" />
   </ItemGroup>
