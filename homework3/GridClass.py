@@ -1,25 +1,32 @@
 
 from tkinter import *
 from Const import *
+from ButtonFunction import *
 
 class gridClass:
 
     name = None 
+
     row = None
     column = None
+
     gridWidth = None
     gridHeight = None
+
     defaultColor = None
     initialColor = None
     changedColor = None
+
     fontName = None
     fontSize = None
+
     isButton = False
     isLabel = False
     isText = False
 
     grid = None
     labelName = None
+
 
     def __init__(self, name = '', rowIndex = 0, columnIndex = 0, width = restWidth, height = interfaceHeight, \
         iColor = defaultColor, dColor = defaultColor, cColor = defaultColor, fontName = '微软雅黑', fontSize = 18, \
@@ -38,12 +45,12 @@ class gridClass:
         self.isLabel = isLabel
         self.isText = isText
 
-    def showGrid(self, root):
+    def showGrid(self, root, gridList = []):
         xDefault = firstColumnWidth
 
         if self.isButton:
             self.grid = Button(root, text = self.name, font = (self.fontName,self.fontSize), \
-                command = lambda :pressButton(), bg = self.initialColor)
+                command = lambda :buttonFunction(gridList, self.name), bg = self.initialColor)
 
         if self.isLabel:
             self.labelName = StringVar()

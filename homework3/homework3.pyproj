@@ -21,8 +21,8 @@
   <ItemGroup>
     <Compile Include="areaCalculate.py" />
     <Compile Include="AreaCalculator.py" />
-    <Compile Include="ButtonClass.py" />
-    <Compile Include="ButtonDo.py" />
+    <Compile Include="FigureClass.py" />
+    <Compile Include="ButtonFunction.py" />
     <Compile Include="Calculator.py" />
     <Compile Include="GridClass.py">
       <SubType>Code</SubType>
@@ -31,10 +31,13 @@
     <Compile Include="Const.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SetParameterLabel.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="SetRowLabel.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ShowButton.py">
+    <Compile Include="UnitClass.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="result.py" />

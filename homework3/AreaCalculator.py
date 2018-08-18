@@ -21,16 +21,17 @@ for i in range(0, buttonTypeNumber):
     buttonNumber = len(buttonName[i])
 
     for j in range(0, buttonNumber):
-        SelectButtonClass[i][j].showGrid(root)
+        SelectButtonClass[i][j].showGrid(root, SelectButtonClass)
 
 
-CalculateButton = gridClass('Calculate', 3, 2, SelectButtonClass[3][0].gridWidth, SelectButtonClass[3][0].gridHeight, iColor = 'gray', isButton = True)
+CalculateButton = gridClass('Calculate', 3, 2, SelectButtonClass[3][0].gridWidth, SelectButtonClass[3][0].gridHeight, \
+    iColor = 'gray', cColor= 'gray ', isButton = True)
 CalculateButton.showGrid(root)
 
 
-CalculateLabel = setRowLabel()
+RowLabel = setRowLabel()
 for i in range(0, defaultGridRowNumber):
-    CalculateLabel[i].showGrid(root)
+    RowLabel[i].showGrid(root)
 
 
 root.mainloop()
