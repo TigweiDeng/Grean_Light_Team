@@ -1,4 +1,3 @@
-from SetButtonClass import *
 
 ButtonType=setButtonClass()
 

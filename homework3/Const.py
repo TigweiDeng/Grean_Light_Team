@@ -1,23 +1,34 @@
 
-rowName = [ 'Select geometry', 'Select unit', 'Set parameter' ,'Get area']
-buttonName = [['Triangle', 'Rectangular', 'Square', 'Circular'], ['In centimeter', 'In inch']]
+rowName = [ 'Select\nGeometry', 'Select\nUnit', 'Set\nParameter' ,'Get\nArea']
+buttonName = [['Triangle', 'Rectangular', 'Square', 'Circular'], ['In cm', 'In inch'], \
+   [], ['In cm²', 'In inch²']]
+
 geometryName = buttonName[0]
-unitName = buttonName[1]
+parameterUnit = buttonName[1]
+resultUnit = buttonName[3]
+
+resultIndex = 3
 
 buttonTypeNumber = len(buttonName)
 geometryNumber = len(geometryName)
-unitNumber = len(unitName)
+parameterUnitNumber = len(parameterUnit)
+resultUnitNumber = len(resultUnit)
 
-defaultColumnNumber = [geometryNumber+1, unitNumber+1]
+defaultColumnNumber = [geometryNumber, parameterUnitNumber, 1, resultUnitNumber+2]
 defaultGridRowNumber = len(rowName)
 
 # defaultMaxGridColumnNumber = max(defaultGridColumnNumber)
 
-initialColor = ['#EEE9E9']*2
-laterColor = ['blue', 'red']
+defaultColor = '#EEE9E9'
+initialColor = [['blue']+[defaultColor]*(geometryNumber-1), ['red']+[defaultColor]*(parameterUnitNumber-1), \
+    [], ['yellow']+[defaultColor]*(resultUnitNumber-1)]
+changedColor = ['blue', 'red', '', 'yellow']
 
 interfaceWidth = 800
 interfaceHeight = 400
+
+firstColumnWidth = 160
+restWidth = interfaceWidth-firstColumnWidth
 
 defaultGridHeight = interfaceHeight / defaultGridRowNumber
 

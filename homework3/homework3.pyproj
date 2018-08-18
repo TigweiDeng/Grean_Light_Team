@@ -24,11 +24,14 @@
     <Compile Include="ButtonClass.py" />
     <Compile Include="ButtonDo.py" />
     <Compile Include="Calculator.py" />
-    <Compile Include="class1.py">
+    <Compile Include="GridClass.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="GetResult.py" />
     <Compile Include="Const.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SetRowLabel.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ShowButton.py">

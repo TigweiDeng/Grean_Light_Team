@@ -1,24 +1,20 @@
-class ButtonType:
 
-    name=None
-    row=None
-    column=None
-    buttonWidth=None
-    buttonHeight=None
-    initialColor=None
-    laterColor=None
+from tkinter import *
+from GridClass import *
+from Const import *
 
-    def __init__(self,typeName,rowIndex,columnIndex,width,height,icolor,lcolor):
-        self.name=typeName
-        self.row=rowIndex
-        self.column=columnIndex
-        self.buttonWidth=width
-        self.buttonHeight=height
-        self.initialColor=icolor
-        self.laterColor=lcolor
+class buttonClass(gridClass):
 
+    isButton = True
+    isLabel = False
 
-"""    def setButton(self,root=None):
-        self.type=Button(self.root,text=self.name,font=('微软雅黑',18),command=lambda :buttonDo(self.iIndex,self.jIndex,self.buttonColor),\
-        bg = Color[self.iIndex][self.jIndex])
-        self.type.place(x=self.xPosition,y=self.yPosition,width=self.buttonWidth,height=self.buttonHeight)"""
+    def __init__(self, typeName = '', rowIndex = 0, columnIndex = 0, width = restWidth, height = interfaceHeight, \
+        dColor = defaultColor, iColor = defaultColor, cColor = defaultColor, fontName = '微软雅黑', fontSize = 18):
+        gridClass.__init__(self, typeName, rowIndex, columnIndex, width, height, dColor, iColor, cColor, fontName, fontSize)
+
+    def showButton(self, root):
+        button=Button(root, text = self.name, font = (self.fontName,self.fontSize), \
+            command = lambda :pressButton(), bg = self.initialColor)
+        button.place(y = self.row*self.gridHeight, x = firstColumnWidth+self.column*self.gridWidth, \
+            width = self.gridWidth, height = self.gridHeight)
+       
