@@ -3,7 +3,7 @@
 
 from tkinter import *
 from math import  *
-from Result import *
+from GetResult import *
 
 
 class ButtonClass:
